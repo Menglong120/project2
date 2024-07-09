@@ -1,0 +1,149 @@
+@font-face {
+    font-family: popin;
+    src: url(../Poppins/Poppins-Regular.ttf);
+}
+body{
+    font-family: popin;
+}
+.bg-body-tertiary{
+    background-color: transparent !important;
+}
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active,
+.navbar-brand{  
+    color: white;
+}
+.navbar{
+    font-size: 13px;
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+}
+.nav-item .down::before{
+    content: "";
+    position: absolute;
+    height: 20px;
+    top: -10px;
+    width: 120px;
+    opacity: 0;
+    z-index: 2;
+}
+.nav-item .down{
+    animation-name: animation 0.3s;
+}
+.nav-item > ul > li >a,
+.nav-item > ul > li > ul >li >a{
+    font-family: popin;
+    font-size: 13px;
+} 
+.nav-item > ul > li >a:hover,
+.nav-item > ul > li > ul >li >a:hover{
+    color: gold;
+    background-color: transparent;
+}
+.second-drop .second{
+    left: -100%;
+    top: 35px;
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.6); 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.carousel-item {
+    height: 100vh;
+    position: relative;
+}
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.navbar-nav .nav-item .nav-link{
+    padding-left: 10px;
+}
+
+.welcome-box {
+    height: 100%;
+    width: 100%;
+    left: 0;
+}
+.col-lg-6 {
+    width: 550px;
+}
+.col-lg-6 h1::after{
+    content: "";
+    position: absolute;
+    height: 5px;
+    top: 100%;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 70px;
+    background-color: gold;
+    z-index: 2;
+}
+.welcome-box .container .row .col-lg-6 h1{
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.btn{
+    padding: 10px 40px;
+    border: 1px solid gold;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.btn:hover{
+    background-color: gold;
+    border: 1px solid gold;
+}
+@media (min-width:1024px) {
+    .nav-item:hover .down{
+        display: block !important;
+    }
+    .second-drop:hover .second{
+        display: block !important;
+    }
+    .collapse > ul > li {
+        position: relative;
+    }
+    .collapse> ul> li::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background-color: gold;
+        width: 0;
+        left: 5px;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+    .collapse > ul > li:hover::after {
+        visibility: visible;
+        width: 90%;
+    }
+} 
+@media (max-width:991px) {
+    .navbar-nav{
+        background-color: white;
+    }
+    .navbar-nav .nav-link,
+    .navbar-nav .nav-link.active{  
+    color: black;
+}
+}
+@media (max-width:768px) {
+    .welcome-box .container .row .col-lg-6 h1{
+        font-size: 37px;
+    }
+}
+@keyframes animation{
+    from{
+        transform: translateY(-15px)
+    }
+    to{
+        transform: translateY(0px)
+    }
+}
